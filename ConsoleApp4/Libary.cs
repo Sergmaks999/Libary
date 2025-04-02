@@ -7,7 +7,7 @@ namespace LibrarySystem
     class Library<T> : IMediaManager<T> where T : Media
     {
         private List<T> items = new List<T>();
-        private Dictionary<string, T> itemLookup = new Dictionary<string, T>(); // Для быстрого поиска
+        private Dictionary<string, T> itemLookup = new Dictionary<string, T>();
 
         public void Add(T item)
         {
