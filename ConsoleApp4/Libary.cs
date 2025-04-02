@@ -61,7 +61,7 @@ namespace LibrarySystem
             catch (KeyNotFoundException ex)
             {
                 Console.WriteLine($"Ошибка при поиске: {ex.Message}");
-                return default(T); // Или null, если T - ссылочный тип
+                return default(T);
             }
         }
 
@@ -116,7 +116,6 @@ namespace LibrarySystem
             }
         }
 
-        // Дополнительные методы фильтрации с использованием LINQ
         public IEnumerable<T> FindByAuthor(string author)
         {
             return LinqQueries<T>.FindByAuthor(items, author);
